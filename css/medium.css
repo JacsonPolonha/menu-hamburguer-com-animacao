@@ -1,36 +1,29 @@
-    @media (max-width: 768px) {
-      ul {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #222;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.5rem 0;
-        transform: translateY(-200%);
-        opacity: 0;
-        transition: all 0.4s ease;
-      }
+@media (min-width: 769px) {
+  /* A partir de 769px — layout desktop */
+  .hamburger {
+    display: none;
+  }
 
-      .menu-toggle:checked + .hamburger + ul {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    nav {
+    display: flex;
+    justify-content: space-between; /* separa logo à esquerda e menu à direita */
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+  }
 
-      .hamburger {
-        display: flex;
-      }
-
-      /* Animação do ícone hambúrguer */
-      .menu-toggle:checked + .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .menu-toggle:checked + .hamburger span:nth-child(2) {
-        opacity: 0;
-      }
-      .menu-toggle:checked + .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-    }
+  ul {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+}
